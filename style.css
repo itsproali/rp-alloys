@@ -1,6 +1,260 @@
+/* The code needs to be written for the following resolution:
+
+1. 1600px X 900px
+
+2. 360px X 749px (mobile responsive)
+
+Please make sure that you abstain from the following :
+
+1. Do not copy & paste the code from w3school, code pen, etc
+
+2. If you pick slider and scroll codes from some website, please make sure that you optimize the same as per the design in the PSD
+
+3. Do not use bootstrap to make the pages responsive but use @media. command 
+
+4. Follow a number of code line hygiene and try to keep the code file size as low as possible.
+
+Note: You may upload the code on GIT OR send us a Zip file OR upload on free hosting server OR upload it on drive. */
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Some default variable */
+:root {
+    --light: #CDCDCD;
+    --dark: #192437;
+    --red: #ec2232
+}
+
+/* Basic CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 100px 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.section-subtitle {
+    color: var(--red);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+/* Navbar */
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.nav-menu {
+    cursor: pointer;
+}
+
+.nav-in-touch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-in-touch:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+/* Banner Section */
+.banner {
+    background-image: linear-gradient(180deg, #05283E -23.09%, rgba(9, 67, 103, 0) 107.85%), url("./assets/banner-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90vh;
+    padding: 70px;
+    margin: 0 50px;
+}
+
+.banner-title {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 98%;
+    color: white;
+}
+
+.banner-items {
+    margin-top: 100px;
+}
+
+.banner-rectangle-red {
+    width: 220px;
+    height: 220px;
+    background-color: var(--red);
+    opacity: 50%;
+}
+
+.banner-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: white;
+    margin-top: -100px;
+    margin-left: -70px;
+}
+
+.transparent-text {
+    background: linear-gradient(90deg, #FFFFFF -6.46%, rgba(255, 255, 255, 0.2) 54.85%, rgba(255, 255, 255, 0) 104.78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+
+/* Summary Section */
+.summary {}
+
+.summary-details {
+    width: 100%;
+    font-size: 18px;
+    color: var(--dark);
+}
+
+.summary-details p {
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+}
+
+.summary-count {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+}
+
+.single-count {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.single-count>div {
+    display: flex;
+    align-items: center;
+}
+
+.count-number {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.plus-icon {
+    color: var(--red);
+    font-size: 3rem;
+}
+
+.count-divider {
+    height: 100px;
+    width: 2px;
+    background-color: var(--light);
+}
+
+/* Customer Choice Section */
+.customer-choice {
+    background-color: #F7F7F7;
+    position: relative;
+}
+
+.png-wing-1 {
+    display: block;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.png-wing-2 {
+    display: block;
+    width: 300px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.service-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 100px;
+    margin-bottom: -250px;
+    margin-right: -120px;
+}
+
+.service-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.cement-card{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("./assets/cement.png");
+}
+
+.mining-card{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("./assets/mining.png");
+}
+
+.rubber-card{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("./assets/rubber.png");
+}
+
+.card-rectangle {
+    height: 3px;
+    width: 30%;
+    background-color: var(--red);
+}
+
+.card-title {
+    font-weight: 500;
+}
+
+.card-details {
+    font-size: 14px;
+}
+
+/* Industry Info Section */
+.industry-info{
+    margin-top: 200px;
+}
