@@ -1,21 +1,3 @@
-/* The code needs to be written for the following resolution:
-
-1. 1600px X 900px
-
-2. 360px X 749px (mobile responsive)
-
-Please make sure that you abstain from the following :
-
-1. Do not copy & paste the code from w3school, code pen, etc
-
-2. If you pick slider and scroll codes from some website, please make sure that you optimize the same as per the design in the PSD
-
-3. Do not use bootstrap to make the pages responsive but use @media. command 
-
-4. Follow a number of code line hygiene and try to keep the code file size as low as possible.
-
-Note: You may upload the code on GIT OR send us a Zip file OR upload on free hosting server OR upload it on drive. */
-
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -31,12 +13,15 @@ Note: You may upload the code on GIT OR send us a Zip file OR upload on free hos
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     background-color: white;
-    min-height: 100vh;
 }
 
 .container {
@@ -45,18 +30,17 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 3rem;
 }
 
 .section-subtitle {
     color: var(--red);
     font-weight: 500;
     font-size: 16px;
-}
-
-.section-title {
-    font-weight: 500;
-    font-size: 3rem;
 }
 
 /* Navbar */
@@ -89,7 +73,7 @@ a {
 
 /* Banner Section */
 .banner {
-    background-image: linear-gradient(180deg, #05283E -23.09%, rgba(9, 67, 103, 0) 107.85%), url("./assets/banner-image.png");
+    background-image: linear-gradient(180deg, #05283E -23.09%, rgba(9, 67, 103, 0) 107.85%), url("../assets/banner-image.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -131,13 +115,10 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;
 }
 
-
 /* Summary Section */
-.summary {}
-
 .summary-details {
     width: 100%;
     font-size: 18px;
@@ -153,6 +134,7 @@ a {
 .summary-count {
     margin-top: 3.5rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 7%;
@@ -161,7 +143,6 @@ a {
 .single-count {
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
 }
 
 .single-count>div {
@@ -220,24 +201,25 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;
+    height: 600px;
     color: white;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    box-shadow: 3px 3px 5px gray;
 }
 
 .cement-card {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("./assets/cement.png");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("../assets/cement.png");
 }
 
 .mining-card {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("./assets/mining.png");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("../assets/mining.png");
 }
 
 .rubber-card {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("./assets/rubber.png");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.05%, #000000 110.99%), url("../assets/rubber.png");
 }
 
 .card-rectangle {
@@ -257,7 +239,7 @@ a {
 /* Industry Info Section */
 .industry-info {
     margin-top: 220px;
-    background-image: linear-gradient(to right, rgba(9, 67, 103, 0.5), rgba(9, 67, 103, 0.6)), url("./assets/industry-info.png");
+    background-image: linear-gradient(to right, rgba(9, 67, 103, 0.5), rgba(9, 67, 103, 0.6)), url("../assets/industry-info.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -275,6 +257,7 @@ a {
 .industry-overview {
     margin-top: 5em;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 3.5rem;
 }
@@ -295,17 +278,16 @@ a {
     font-weight: 400;
 }
 
-/* Contact Sectin */
+/* Contact Section */
 .contact {
-    background-image: linear-gradient(to left, #FFFFFF 12.46%, rgba(253, 253, 253, 0.875643) 35.36%, rgba(238, 238, 238, 0.02) 73%), url("./assets/map.png");
+    background-image: linear-gradient(to left, #FFFFFF 12.46%, rgba(253, 253, 253, 0.875643) 35.36%, rgba(238, 238, 238, 0.02) 73%), url("../assets/map.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
     color: white;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .contact-container {
@@ -316,8 +298,6 @@ a {
     justify-content: space-between;
     gap: 3rem;
 }
-
-.map {}
 
 .get-in-touch {
     color: var(--dark);
@@ -359,8 +339,6 @@ a {
     padding-bottom: 10px;
     border-bottom: 2px solid var(--light);
 }
-
-.input-container img {}
 
 .input-container input,
 .message-container textarea {
@@ -405,6 +383,7 @@ a {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 10%;
@@ -414,7 +393,7 @@ footer {
 .footer-industry h2 {
     font-weight: 500;
     font-size: 1.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .footer-divider {
@@ -423,14 +402,15 @@ footer {
     background-color: var(--dark);
 }
 
-.footer-copyright{
+.footer-copyright {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: .75rem;
 }
 
-.footer-social, .footer-industry > div {
+.footer-social,
+.footer-industry>div {
     display: flex;
     gap: 2rem;
 }
@@ -438,6 +418,115 @@ footer {
 .footer-social a {
     display: inline-block;
 }
+
 .footer-copyright a {
     color: var(--red);
+}
+
+/*==================
+    Responsive 
+===================*/
+
+/* Tablet Tablet Responsive */
+@media only screen and (max-width: 1200px) {
+    .service-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: -220px;
+        margin-right: -70px;
+    }
+
+    .service-card {
+        height: 500px;
+    }
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 700px) {
+
+    /* Basic */
+    .container {
+        padding: 50px 3%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Navbar */
+    .nav {
+        padding: 10px 5px;
+    }
+
+    .nav-in-touch {
+        display: none;
+    }
+
+    /* Banner Section */
+    .banner {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .banner-title {
+        font-size: 40px;
+    }
+
+    .banner-rectangle-red {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Summary Section */
+    .summary-details p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .count-divider {
+        display: none;
+    }
+
+    /* Customer Choice Section */
+    .service-card-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    /* Industry Info Section */
+    .industry-info {
+        margin-top: 0px;
+        display: block;
+    }
+
+    .single-overview {
+        margin: 0 auto;
+    }
+
+    .industry-circle-text {
+        display: none;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 4rem .75rem;
+    }
+
+    /* Footer Section */
+    .footer-industry,
+    .footer-copyright {
+        margin: 0 auto;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-copyright {
+        margin-top: 2rem;
+    }
 }
